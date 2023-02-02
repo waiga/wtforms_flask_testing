@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email
 from secret_key import MY_SECRET_KEY
+from flask_bootstrap import Bootstrap
 
 
 class LoginForm(FlaskForm):
@@ -13,6 +14,7 @@ class LoginForm(FlaskForm):
 
 app = Flask(__name__)
 app.secret_key = MY_SECRET_KEY
+Bootstrap(app)
 
 
 @app.route("/")
